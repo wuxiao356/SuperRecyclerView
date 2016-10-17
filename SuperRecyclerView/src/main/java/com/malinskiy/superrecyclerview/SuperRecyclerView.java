@@ -44,6 +44,8 @@ public class SuperRecyclerView extends FrameLayout {
     protected RecyclerView.OnScrollListener mInternalOnScrollListener;
     private RecyclerView.OnScrollListener mSwipeDismissScrollListener;
     protected RecyclerView.OnScrollListener mExternalOnScrollListener;
+    
+    protected RecyclerView.OnFlingListener mExternalOnFlingListener;
 
     protected OnMoreListener mOnMoreListener;
     protected boolean isLoadingMore;
@@ -436,6 +438,13 @@ public class SuperRecyclerView extends FrameLayout {
      */
     public void setOnScrollListener(RecyclerView.OnScrollListener listener) {
         mExternalOnScrollListener = listener;
+    }
+    
+    /**
+     * Set the fling listener for the recycler
+     */
+    public void setOnFlingListener(RecyclerView.onFlingListener listener) {
+        mExternalOnFlingListener = listener;
     }
 
     /**
