@@ -14,11 +14,7 @@
  * limitations under the License.
  */
 
-package com.malinskiy.superrecyclerview.swipe;
-
-import com.nineoldandroids.animation.Animator;
-import com.nineoldandroids.animation.AnimatorListenerAdapter;
-import com.nineoldandroids.animation.ValueAnimator;
+package com.wuyu.superrecyclerview.swipe;
 
 import android.annotation.SuppressLint;
 import android.graphics.Rect;
@@ -31,6 +27,10 @@ import android.view.VelocityTracker;
 import android.view.View;
 import android.view.ViewConfiguration;
 import android.view.ViewGroup;
+
+import com.nineoldandroids.animation.Animator;
+import com.nineoldandroids.animation.AnimatorListenerAdapter;
+import com.nineoldandroids.animation.ValueAnimator;
 
 import java.util.ArrayList;
 import java.util.Collections;

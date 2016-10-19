@@ -8,7 +8,7 @@ import android.widget.Toast;
 
 import com.eowise.recyclerview.stickyheaders.StickyHeadersBuilder;
 import com.eowise.recyclerview.stickyheaders.StickyHeadersItemDecoration;
-import com.malinskiy.superrecyclerview.SuperRecyclerView;
+import com.wuyu.superrecyclerview.SuperRecyclerView;
 
 import java.util.ArrayList;
 import java.util.Arrays;

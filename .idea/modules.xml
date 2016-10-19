@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/SuperRecyclerView.iml" filepath="$PROJECT_DIR$/SuperRecyclerView.iml" />
+      <module fileurl="file://$PROJECT_DIR$/SuperRecyclerView-sample/SuperRecyclerView-sample.iml" filepath="$PROJECT_DIR$/SuperRecyclerView-sample/SuperRecyclerView-sample.iml" />
+      <module fileurl="file://$PROJECT_DIR$/super-recycler-view/super-recycler-view.iml" filepath="$PROJECT_DIR$/super-recycler-view/super-recycler-view.iml" />
+    </modules>
+  </component>
+</project>

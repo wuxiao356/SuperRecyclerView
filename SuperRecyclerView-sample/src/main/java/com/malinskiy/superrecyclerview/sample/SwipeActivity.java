@@ -9,9 +9,9 @@ import android.support.v7.widget.LinearLayoutManager;
 import android.view.View;
 import android.widget.Toast;
 
-import com.malinskiy.superrecyclerview.OnMoreListener;
-import com.malinskiy.superrecyclerview.SuperRecyclerView;
-import com.malinskiy.superrecyclerview.swipe.SwipeItemManagerInterface;
+import com.wuyu.superrecyclerview.OnMoreListener;
+import com.wuyu.superrecyclerview.SuperRecyclerView;
+import com.wuyu.superrecyclerview.swipe.SwipeItemManagerInterface;
 
 import java.util.ArrayList;
 

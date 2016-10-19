@@ -8,8 +8,8 @@ import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.malinskiy.superrecyclerview.swipe.BaseSwipeAdapter;
-import com.malinskiy.superrecyclerview.swipe.SwipeLayout;
+import com.wuyu.superrecyclerview.swipe.BaseSwipeAdapter;
+import com.wuyu.superrecyclerview.swipe.SwipeLayout;
 
 import java.util.ArrayList;
 

@@ -1,1 +1,1 @@
-include ':SuperRecyclerView-sample', ':SuperRecyclerView'
+include ':SuperRecyclerView-sample', ':super-recycler-view'

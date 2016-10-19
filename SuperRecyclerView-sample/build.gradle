@@ -1,15 +1,15 @@
 apply plugin: 'com.android.application'
 
 android {
-    compileSdkVersion versions.compileSdk
-    buildToolsVersion versions.buildTools
+    compileSdkVersion 24
+    buildToolsVersion "24.0.2"
 
     defaultConfig {
-        minSdkVersion versions.minSdk
-        targetSdkVersion versions.targetSdk
+        minSdkVersion 15
+        targetSdkVersion 24
         versionCode versions.code
         versionName versions.name
-        applicationId "com.malinskiy.superrecyclerview.sample"
+        applicationId "com.wuxiao356.superrecyclerview.sample"
     }
 
     buildTypes {
@@ -20,7 +20,7 @@ android {
 }
 
 dependencies {
-    compile project(':SuperRecyclerView')
+    compile project(':super-recycler-view')
 
     compile libraries.supportAppCompat
     compile libraries.supportDesign

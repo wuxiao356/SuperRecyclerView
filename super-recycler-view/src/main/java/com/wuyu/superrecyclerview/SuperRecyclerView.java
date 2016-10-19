@@ -1,4 +1,4 @@
-package com.malinskiy.superrecyclerview;
+package com.wuyu.superrecyclerview;
 
 import android.content.Context;
 import android.content.res.TypedArray;
@@ -14,8 +14,10 @@ import android.view.View;
 import android.view.ViewStub;
 import android.widget.FrameLayout;
 
-import com.malinskiy.superrecyclerview.swipe.SwipeDismissRecyclerViewTouchListener;
-import com.malinskiy.superrecyclerview.util.FloatUtil;
+import com.wuyu.superrecyclerview.OnMoreListener;
+import com.wuyu.superrecyclerview.R;
+import com.wuyu.superrecyclerview.swipe.SwipeDismissRecyclerViewTouchListener;
+import com.wuyu.superrecyclerview.util.FloatUtil;
 
 public class SuperRecyclerView extends FrameLayout {
 
@@ -443,7 +445,7 @@ public class SuperRecyclerView extends FrameLayout {
     /**
      * Set the fling listener for the recycler
      */
-    public void setOnFlingListener(RecyclerView.onFlingListener listener) {
+    public void setOnFlingListener(RecyclerView.OnFlingListener listener) {
         mExternalOnFlingListener = listener;
     }
 

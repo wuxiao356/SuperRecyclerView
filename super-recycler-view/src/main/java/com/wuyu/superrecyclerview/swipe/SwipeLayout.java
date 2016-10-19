@@ -1,7 +1,7 @@
-package com.malinskiy.superrecyclerview.swipe;
+package com.wuyu.superrecyclerview.swipe;
 
-import com.malinskiy.superrecyclerview.R;
-import com.malinskiy.superrecyclerview.util.FloatUtil;
+import com.wuyu.superrecyclerview.R;
+import com.wuyu.superrecyclerview.util.FloatUtil;
 
 import android.content.Context;
 import android.content.res.TypedArray;

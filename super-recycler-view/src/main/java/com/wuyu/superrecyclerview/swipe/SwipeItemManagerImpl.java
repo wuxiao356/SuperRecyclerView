@@ -1,4 +1,4 @@
-package com.malinskiy.superrecyclerview.swipe;
+package com.wuyu.superrecyclerview.swipe;
 
 import android.support.v7.widget.RecyclerView;
 
@@ -11,7 +11,7 @@ import java.util.Set;
 /**
  * SwipeItemMangerImpl is a helper class to help maintain swipe status
  */
-public class SwipeItemManagerImpl implements SwipeItemManagerInterface {
+public class SwipeItemManagerImpl implements com.wuyu.superrecyclerview.swipe.SwipeItemManagerInterface {
     public final int INVALID_POSITION = -1;
 
     private Mode mode = Mode.Single;
@@ -19,7 +19,7 @@ public class SwipeItemManagerImpl implements SwipeItemManagerInterface {
     protected int mOpenPosition = INVALID_POSITION;
 
     protected Set<Integer>     mOpenPositions = new HashSet<>();
-    protected Set<SwipeLayout> mShownLayouts  = new HashSet<>();
+    protected Set<com.wuyu.superrecyclerview.swipe.SwipeLayout> mShownLayouts  = new HashSet<>();
 
     protected RecyclerView.Adapter mAdapter;
 
@@ -27,7 +27,7 @@ public class SwipeItemManagerImpl implements SwipeItemManagerInterface {
         if (adapter == null)
             throw new IllegalArgumentException("Adapter can not be null");
 
-        if (!(adapter instanceof SwipeItemManagerInterface))
+        if (!(adapter instanceof com.wuyu.superrecyclerview.swipe.SwipeItemManagerInterface))
             throw new IllegalArgumentException("adapter should implement the SwipeAdapterInterface");
 
         this.mAdapter = adapter;
@@ -58,7 +58,7 @@ public class SwipeItemManagerImpl implements SwipeItemManagerInterface {
             initialize(targetViewHolder, position);
         }
 
-        SwipeLayout swipeLayout = targetViewHolder.swipeLayout;
+        com.wuyu.superrecyclerview.swipe.SwipeLayout swipeLayout = targetViewHolder.swipeLayout;
         if (swipeLayout == null)
             throw new IllegalStateException("can not find SwipeLayout in target view");
 
@@ -90,15 +90,15 @@ public class SwipeItemManagerImpl implements SwipeItemManagerInterface {
     }
 
     @Override
-    public void closeAllExcept(SwipeLayout layout) {
-        for (SwipeLayout s : mShownLayouts) {
+    public void closeAllExcept(com.wuyu.superrecyclerview.swipe.SwipeLayout layout) {
+        for (com.wuyu.superrecyclerview.swipe.SwipeLayout s : mShownLayouts) {
             if (s != layout)
                 s.close();
         }
     }
 
     @Override
-    public void removeShownLayouts(SwipeLayout layout) {
+    public void removeShownLayouts(com.wuyu.superrecyclerview.swipe.SwipeLayout layout) {
         mShownLayouts.remove(layout);
     }
 
@@ -112,7 +112,7 @@ public class SwipeItemManagerImpl implements SwipeItemManagerInterface {
     }
 
     @Override
-    public List<SwipeLayout> getOpenLayouts() {
+    public List<com.wuyu.superrecyclerview.swipe.SwipeLayout> getOpenLayouts() {
         return new ArrayList<>(mShownLayouts);
     }
 
@@ -125,7 +125,7 @@ public class SwipeItemManagerImpl implements SwipeItemManagerInterface {
         }
     }
 
-    private class OnLayoutListener implements SwipeLayout.OnLayout {
+    private class OnLayoutListener implements com.wuyu.superrecyclerview.swipe.SwipeLayout.OnLayout {
 
         private int position;
 
@@ -138,7 +138,7 @@ public class SwipeItemManagerImpl implements SwipeItemManagerInterface {
         }
 
         @Override
-        public void onLayout(SwipeLayout v) {
+        public void onLayout(com.wuyu.superrecyclerview.swipe.SwipeLayout v) {
             if (isOpen(position)) {
                 v.open(false, false);
             } else {
@@ -157,7 +157,7 @@ public class SwipeItemManagerImpl implements SwipeItemManagerInterface {
         }
 
         @Override
-        public void onClose(SwipeLayout layout) {
+        public void onClose(com.wuyu.superrecyclerview.swipe.SwipeLayout layout) {
             if (mode == Mode.Multiple) {
                 mOpenPositions.remove(position);
             } else {
@@ -166,14 +166,14 @@ public class SwipeItemManagerImpl implements SwipeItemManagerInterface {
         }
 
         @Override
-        public void onStartOpen(SwipeLayout layout) {
+        public void onStartOpen(com.wuyu.superrecyclerview.swipe.SwipeLayout layout) {
             if (mode == Mode.Single) {
                 closeAllExcept(layout);
             }
         }
 
         @Override
-        public void onOpen(SwipeLayout layout) {
+        public void onOpen(com.wuyu.superrecyclerview.swipe.SwipeLayout layout) {
             if (mode == Mode.Multiple)
                 mOpenPositions.add(position);
             else {

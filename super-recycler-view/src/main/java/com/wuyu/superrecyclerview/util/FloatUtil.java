@@ -1,4 +1,4 @@
-package com.malinskiy.superrecyclerview.util;
+package com.wuyu.superrecyclerview.util;
 
 public class FloatUtil {
     private final static float EPSILON = 0.00000001F;

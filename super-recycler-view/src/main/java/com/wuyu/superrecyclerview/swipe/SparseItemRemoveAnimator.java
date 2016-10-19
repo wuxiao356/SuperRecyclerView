@@ -1,4 +1,4 @@
-package com.malinskiy.superrecyclerview.swipe;
+package com.wuyu.superrecyclerview.swipe;
 
 import android.support.v7.widget.DefaultItemAnimator;
 import android.support.v7.widget.RecyclerView;

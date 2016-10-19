@@ -1,10 +1,5 @@
 package com.malinskiy.superrecyclerview.sample;
 
-import com.malinskiy.superrecyclerview.OnMoreListener;
-import com.malinskiy.superrecyclerview.SuperRecyclerView;
-import com.malinskiy.superrecyclerview.swipe.SparseItemRemoveAnimator;
-import com.malinskiy.superrecyclerview.swipe.SwipeDismissRecyclerViewTouchListener;
-
 import android.app.Activity;
 import android.os.Bundle;
 import android.os.Handler;
@@ -13,12 +8,17 @@ import android.support.v4.widget.SwipeRefreshLayout;
 import android.support.v7.widget.RecyclerView;
 import android.widget.Toast;
 
+import com.wuyu.superrecyclerview.OnMoreListener;
+import com.wuyu.superrecyclerview.SuperRecyclerView;
+import com.wuyu.superrecyclerview.swipe.SparseItemRemoveAnimator;
+import com.wuyu.superrecyclerview.swipe.SwipeDismissRecyclerViewTouchListener;
+
 import java.util.ArrayList;
 
 public abstract class BaseActivity extends Activity implements SwipeRefreshLayout.OnRefreshListener, OnMoreListener, SwipeDismissRecyclerViewTouchListener.DismissCallbacks {
 
     private SuperRecyclerView          mRecycler;
-    private StringListAdapter          mAdapter;
+    private StringListAdapter mAdapter;
     private SparseItemRemoveAnimator   mSparseAnimator;
     private RecyclerView.LayoutManager mLayoutManager;
     private Handler                    mHandler;

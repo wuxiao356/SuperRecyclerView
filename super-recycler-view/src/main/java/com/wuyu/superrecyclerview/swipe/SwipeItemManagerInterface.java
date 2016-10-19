@@ -1,4 +1,4 @@
-package com.malinskiy.superrecyclerview.swipe;
+package com.wuyu.superrecyclerview.swipe;
 
 import java.util.List;
 
@@ -8,13 +8,13 @@ public interface SwipeItemManagerInterface {
 
     void closeItem(int position);
 
-    void closeAllExcept(SwipeLayout layout);
+    void closeAllExcept(com.wuyu.superrecyclerview.swipe.SwipeLayout layout);
 
     List<Integer> getOpenItems();
 
-    List<SwipeLayout> getOpenLayouts();
+    List<com.wuyu.superrecyclerview.swipe.SwipeLayout> getOpenLayouts();
 
-    void removeShownLayouts(SwipeLayout layout);
+    void removeShownLayouts(com.wuyu.superrecyclerview.swipe.SwipeLayout layout);
 
     boolean isOpen(int position);
 

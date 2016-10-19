@@ -1,4 +1,4 @@
-package com.malinskiy.superrecyclerview;
+package com.wuyu.superrecyclerview;
 
 public interface OnMoreListener {
     /**
