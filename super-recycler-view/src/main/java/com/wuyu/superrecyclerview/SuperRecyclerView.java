@@ -45,6 +45,8 @@ public class SuperRecyclerView extends FrameLayout {
     private RecyclerView.OnScrollListener mSwipeDismissScrollListener;
     protected RecyclerView.OnScrollListener mExternalOnScrollListener;
 
+    protected RecyclerView.OnFlingListener mExternalOnFlingListener;
+
     protected OnMoreListener mOnMoreListener;
     protected boolean isLoadingMore;
     protected SwipeRefreshLayout mPtrLayout;
@@ -163,6 +165,14 @@ public class SuperRecyclerView extends FrameLayout {
             }
         };
         mRecycler.addOnScrollListener(mInternalOnScrollListener);
+
+        mRecycler.setOnFlingListener(new RecyclerView.OnFlingListener() {
+            @Override
+            public boolean onFling(int velocityX, int velocityY) {
+                mExternalOnFlingListener.onFling(velocityX, velocityY);
+                return false;
+            }
+        });
 
         if (!FloatUtil.compareFloats(mPadding, -1.0f)) {
             mRecycler.setPadding(mPadding, mPadding, mPadding, mPadding);
@@ -442,7 +452,7 @@ public class SuperRecyclerView extends FrameLayout {
      * Set the fling listener for the recycler
      */
     public void setOnFlingListener(RecyclerView.OnFlingListener listener) {
-        mRecycler.setOnFlingListener(listener);
+        mExternalOnFlingListener = listener;
     }
 
     /**

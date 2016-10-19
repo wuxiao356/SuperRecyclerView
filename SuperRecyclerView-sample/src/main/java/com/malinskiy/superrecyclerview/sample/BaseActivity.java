@@ -6,6 +6,7 @@ import android.os.Handler;
 import android.os.Looper;
 import android.support.v4.widget.SwipeRefreshLayout;
 import android.support.v7.widget.RecyclerView;
+import android.util.Log;
 import android.widget.Toast;
 
 import com.wuyu.superrecyclerview.OnMoreListener;
@@ -80,6 +81,15 @@ public abstract class BaseActivity extends Activity implements SwipeRefreshLayou
         mRecycler.setRefreshListener(this);
         mRecycler.setRefreshingColorResources(android.R.color.holo_orange_light, android.R.color.holo_blue_light, android.R.color.holo_green_light, android.R.color.holo_red_light);
         mRecycler.setupMoreListener(this, 1);
+
+        mRecycler.setOnFlingListener(new RecyclerView.OnFlingListener() {
+            @Override
+            public boolean onFling(int velocityX, int velocityY) {
+                Log.d("Fling", "velocityX: " + velocityX + ", velocityY: " + velocityY);
+                return false;
+            }
+        });
+
     }
 
     protected abstract int getLayoutId();

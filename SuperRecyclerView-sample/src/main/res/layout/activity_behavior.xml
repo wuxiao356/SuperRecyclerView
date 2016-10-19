@@ -20,7 +20,7 @@
 
     </android.support.design.widget.AppBarLayout>
 
-    <com.malinskiy.superrecyclerview.SuperRecyclerView
+    <com.wuyu.superrecyclerview.SuperRecyclerView
         xmlns:app="http://schemas.android.com/apk/res-auto"
         android:id="@+id/list"
         android:layout_width="match_parent"
