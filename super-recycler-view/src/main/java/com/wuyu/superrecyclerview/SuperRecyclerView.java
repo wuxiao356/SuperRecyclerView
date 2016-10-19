@@ -14,8 +14,6 @@ import android.view.View;
 import android.view.ViewStub;
 import android.widget.FrameLayout;
 
-import com.wuyu.superrecyclerview.OnMoreListener;
-import com.wuyu.superrecyclerview.R;
 import com.wuyu.superrecyclerview.swipe.SwipeDismissRecyclerViewTouchListener;
 import com.wuyu.superrecyclerview.util.FloatUtil;
 
@@ -46,8 +44,6 @@ public class SuperRecyclerView extends FrameLayout {
     protected RecyclerView.OnScrollListener mInternalOnScrollListener;
     private RecyclerView.OnScrollListener mSwipeDismissScrollListener;
     protected RecyclerView.OnScrollListener mExternalOnScrollListener;
-    
-    protected RecyclerView.OnFlingListener mExternalOnFlingListener;
 
     protected OnMoreListener mOnMoreListener;
     protected boolean isLoadingMore;
@@ -446,7 +442,7 @@ public class SuperRecyclerView extends FrameLayout {
      * Set the fling listener for the recycler
      */
     public void setOnFlingListener(RecyclerView.OnFlingListener listener) {
-        mExternalOnFlingListener = listener;
+        mRecycler.setOnFlingListener(listener);
     }
 
     /**
